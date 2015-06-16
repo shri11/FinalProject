@@ -1,17 +1,39 @@
 package com.example.sreesha.firstrun;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 
-public class Register extends ActionBarActivity {
+public class Register extends AppCompatActivity implements View.OnClickListener{
+
+    Button buttonRegister;
+    EditText editName, editAge, editUsername, editPassword,editReconfirmPassword;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        editName = (EditText)findViewById(R.id.editName);
+        editAge = (EditText)findViewById(R.id.editAge);
+        editUsername = (EditText)findViewById(R.id.editUsername);
+        editPassword = (EditText)findViewById(R.id.editPassword);
+        editReconfirmPassword = (EditText)findViewById(R.id.editReconfirmPassword);
+        buttonRegister = (Button)findViewById(R.id.clickRegister);
+        buttonRegister.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.clickRegister:
+                break;
+        }
     }
 
     @Override

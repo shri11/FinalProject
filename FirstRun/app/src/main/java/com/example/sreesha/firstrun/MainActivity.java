@@ -1,17 +1,38 @@
 package com.example.sreesha.firstrun;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    Button buttonLogout;
+    EditText editUsername, editName,editAge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        editName = (EditText)findViewById(R.id.editName);
+        editAge = (EditText)findViewById(R.id.editAge);
+        editUsername = (EditText)findViewById(R.id.editUsername);
+        buttonLogout = (Button)findViewById(R.id.clickLogout);
+        buttonLogout.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.clickLogout:
+                startActivity(new Intent(this, Login.class));
+                break;
+        }
     }
 
     @Override
