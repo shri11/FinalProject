@@ -24,7 +24,7 @@ public class UserLocalStore {
         spEditor.commit();
     }
 
-    public User getUserLoggedIn(){
+    public User getUserLoggedInDetails(){
         String name = userLocalDatabase.getString("Name", "");
         int age = userLocalDatabase.getInt("Age",-1);
         String username = userLocalDatabase.getString("UserName","");
@@ -40,6 +40,15 @@ public class UserLocalStore {
         spEditor.commit();
     }
 
+    public boolean getUserLoggedIn(){
+        if(userLocalDatabase.getBoolean("LoggedIn", false)){
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     public void clearUserData(){
         SharedPreferences.Editor spEditor = userLocalDatabase.edit();
         spEditor.clear();
