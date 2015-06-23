@@ -8,10 +8,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
-
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+/**
+ * Created by Sreesha on 6/23/2015.
+ */
+public class FirstPage extends AppCompatActivity implements View.OnClickListener {
 
     Button buttonLogout;
     EditText editUsername, editName, editAge;
@@ -28,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonLogout.setOnClickListener(this);
 
         userLocalStore = new UserLocalStore(this);
-
     }
 
     @Override
@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -82,7 +83,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return super.onOptionsItemSelected(item);
     }
 }
-
-
 
 
