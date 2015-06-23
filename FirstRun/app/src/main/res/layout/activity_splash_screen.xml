@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -8,5 +8,19 @@
     android:paddingRight="64dp"
     android:paddingTop="16dp"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="@drawable/my_background">
-</LinearLayout>
+    android:background="@drawable/my_background"
+    android:id="@+id/logoName"
+    tools:context=".SplashScreen">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="decodAR"
+        android:textSize="45sp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
