@@ -1,12 +1,14 @@
 package com.example.sreesha.firstrun;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 /**
  * Created by Sreesha on 6/23/2015.
@@ -18,6 +20,9 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        Typeface newTypeFace = Typeface.createFromAsset(getAssets(), "20th Century Font Regular.ttf");
+        TextView myTextView = (TextView) findViewById(R.id.textView1);
+        myTextView.setTypeface(newTypeFace);
 
         Thread startTimer = new Thread() {
             public void run() {
@@ -35,8 +40,8 @@ public class SplashScreen extends AppCompatActivity {
 
     }
 
-/*
-    @Override
+
+ /*   @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
         // Inflate the menu; this adds items to the action bar if it is present.
