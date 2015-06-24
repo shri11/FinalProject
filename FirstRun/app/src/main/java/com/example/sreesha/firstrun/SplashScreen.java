@@ -20,7 +20,7 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        Typeface newTypeFace = Typeface.createFromAsset(getAssets(), "20th Century Font Regular.ttf");
+        Typeface newTypeFace = Typeface.createFromAsset(getAssets(), "001 Interstellar Log Regular.ttf");
         TextView myTextView = (TextView) findViewById(R.id.textView1);
         myTextView.setTypeface(newTypeFace);
 
