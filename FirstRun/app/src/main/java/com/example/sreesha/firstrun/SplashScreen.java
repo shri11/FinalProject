@@ -20,7 +20,7 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        Typeface newTypeFace = Typeface.createFromAsset(getAssets(), "001 Interstellar Log Regular.ttf");
+        Typeface newTypeFace = Typeface.createFromAsset(getAssets(), "20th Century Font Regular.ttf");
         TextView myTextView = (TextView) findViewById(R.id.textView1);
         myTextView.setTypeface(newTypeFace);
 
@@ -41,13 +41,13 @@ public class SplashScreen extends AppCompatActivity {
     }
 
 
- /*   @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_splash_screen, menu);
         return true;
-    }*/
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
